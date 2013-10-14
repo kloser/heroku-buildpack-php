@@ -49,6 +49,7 @@ ln -s ../php/bin/php php
 cd ..
 
 export LD_LIBRARY_PATH=$BUILD_DIR/local/lib
+export PATH="{$PATH}:${BUILD_DIR}/vendor/php/bin"
 
 # set a slug_id identifier
 slug_id=$(php/bin/php -r "echo md5(uniqid('', TRUE));")
